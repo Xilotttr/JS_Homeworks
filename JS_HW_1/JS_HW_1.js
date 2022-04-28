@@ -71,5 +71,3 @@ function ages(){
     return 
 }     
 console.log(ages())
-console.log(ages())
-console.log(ages())
