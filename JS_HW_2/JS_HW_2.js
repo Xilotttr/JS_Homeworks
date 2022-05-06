@@ -29,7 +29,6 @@ function Length(a){
     else if(a.length > 64){
         console.log('Verification failed (Length of string greater than 64 symbols)')
         throw 'Verification failed (Length of string greater than 64 symbols)'
-        
     }
 }
 
@@ -54,12 +53,12 @@ function str_check(a){
 }
 
 function letters_check(a){
-    if(!/[a-zа-я]/.test(a)){
+    if(!/[a-zа-яA-ZА-я]/.test(a)){
         console.log('Verification failed (There is NO letters in the string)')
         throw 'Verification failed (There is NO letters in the string)'
     }
 
-    if(!/[A-FА-Я]/.test(a)){
+    if(!/[A-ZА-Я]/.test(a)){
         console.log('Verification failed (There is NO uppercase letters in the string)')
         throw 'Verification failed (There is NO uppercase letters in the string)'
     }
