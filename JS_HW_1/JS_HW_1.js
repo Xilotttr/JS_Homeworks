@@ -97,16 +97,16 @@ else
 function ages_1(age){
     let age_2 = 18 , age_3 = 60;
     if(age < age_2){
-        return (`You don't have access cause your age is ` + age + ` It's less then`)
+        console.log (`You don't have access cause your age is ` + age + ` It's less then`)
     }
     else if(age >= age_2 && age < age_3){
-        return 'Welcome !' 
+        console.log ('Welcome !' )
     }
     else if (age > age_3){
-        return 'Keep calm and look culture channel' 
+        console.log ('Keep calm and look culture channel' )
     }
     else{
-        return 'Technical work'
+        console.log ('Technical work')
     }
 }
 ages_1(17);
@@ -117,22 +117,22 @@ ages_1(61);
 // Преобразовать задание 1* таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - кидалась ошибка.
 function ages_2(age){
     let age_2 = 18 , age_3 = 60;
-    if(typeof age != 'number'){
-        return 'Entered data is NaN'
-    }
-    else{
+    if(!isNaN(age)){
         if(age < age_2){
-            return (`You don't have access cause your age is ` + age + ` It's less then`)
+            console.log (`You don't have access cause your age is ` + age + ` It's less then`)
         }
         else if(age >= age_2 && age < age_3){
-            return 'Welcome !'
+            console.log ('Welcome !')
         }
         else if (age > age_3){
-            return 'Keep calm and look culture channel'
+            console.log ('Keep calm and look culture channel')
         }
         else{
-            return 'Technical work'
+            console.log ('Technical work')
         }
+    }
+    else{
+        console.log ('Entered data is NaN')
     }
 }
 ages_2('asdcz')
@@ -145,26 +145,26 @@ ages_2(61)
 function ages_3(age){
     let age_2 = 18, age_3 = 60;
     age = Number(age);
-    if(age !isNan){
+    if(!isNaN(age)){
         if( age < age_2)
         {
-            return (`You don't have access cause your age is ` + age + ` It's less then`);
+            console.log (`You don't have access cause your age is ` + age + ` It's less then`);
         }
         else if(age >= age_2 && age < age_3)
         {
-            return 'Welcome !'
+            console.log ('Welcome !')
         }
         else if(age > age_3)
         {
-            return 'Keep calm and look Culture channel'
+            console.log ('Keep calm and look Culture channel')
         }
         else
         {
-            return 'Technical work'
+            console.log ('Technical work')
         }
     }
     else{
-        return 'Entered data is NaN'
+        console.log ('Entered data is NaN')
     }
 }
 
@@ -180,34 +180,34 @@ let age_4 = prompt('Enter your age');
 function ages_4(age){
     let age_2 = 18, age_3 = 60
     age = Number(age)
-    if(typeof age === 'number' && age > 0)
+    if(!isNaN(age) && age > 0)
     {
         if(age < age_2)
         {
-            return (`You don't have access cause your age is ` + age + ` It's less then`)
+            console.log (`You don't have access cause your age is ` + age + ` It's less then`)
         }
         else if(age >= age_2 && age < age_3)
         {
-            return 'Welcome !'
+            console.log ('Welcome !')
         }
         else if(age > age_3)
         {
-           return 'Keep calm and look Culture channel'
+           console.log ('Keep calm and look Culture channel')
         }
         else
         {
-            return 'Technical work'
+            console.log ('Technical work')
         }
     }
     else
     {
-        if(typeof age != 'number')
+        if(isNaN(age))
         {
-            return 'Entered data is NaN'
+            return console.log('Entered data is NaN')
         }
         else if(age < 0)
         {
-            return 'Entered data less than 0'
+            return console.log('Entered data less than 0')
         }
     }  
 }     
