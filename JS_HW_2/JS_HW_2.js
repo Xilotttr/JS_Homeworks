@@ -29,6 +29,7 @@ function Length(a){
     else if(a.length > 64){
         console.log('Verification failed (Length of string greater than 64 symbols)')
         throw 'Verification failed (Length of string greater than 64 symbols)'
+        
     }
 }
 
@@ -62,6 +63,5 @@ function letters_check(a){
         console.log('Verification failed (There is NO uppercase letters in the string)')
         throw 'Verification failed (There is NO uppercase letters in the string)'
     }
-    
 }
 

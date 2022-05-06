@@ -17,7 +17,7 @@ item_3 = item_1 + item_2;
 //9. Вывести в консоль item_3.
 console.log(item_3);
 //10. Создать переменную “item_4”
-let item_4 = 'Yolochka';
+let item_4;
 //11. Присвоить переменной item_4 строку “Yolochka”
 item_4 = 'Yolochka';
 //12. Вывести в консоль item_4.
@@ -27,7 +27,7 @@ console.log(item_3+item_4);
 // 14. Вывести в консоль умножение item_3 и item_4.
 console.log(item_4*item_3);
 // 15. Создать переменную “item_5”
-let item_5 = item_3;
+let item_5
 // 16. Присвоить переменной item_5 переменную item_3
 item_5 = item_3;
 // 17. Создать переменную item_6.
