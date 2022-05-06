@@ -169,6 +169,11 @@ console.log(ages_3('23'));
 console.log(ages_3('hgashjgdk234123'));
 console.log(ages_3(54));
 
+// 4***:
+// Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке
+
+let age_4 = prompt('Enter your age');
+
 function ages_4(age){
     let age_2 = 18, age_3 = 60
     age = Number(age)
@@ -204,5 +209,5 @@ function ages_4(age){
     }  
     return 
 }     
-let age_4 = prompt('Enter your age');
+
 console.log(ages_4(age_4))
