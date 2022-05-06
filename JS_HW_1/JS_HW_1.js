@@ -61,12 +61,12 @@ if(age_1 < age_2)
     console.log(`You don't have access cause your age is ` + age_1 + ` It's less then`);
 }
 // 31. Если age_1 >=  age_2 и age_1 <  age_3, вывести в консоль “Welcome  !”
-if(age_1 >= age_2 && age_1 < age_3)
+else if(age_1 >= age_2 && age_1 < age_3)
 {
     console.log('Welcome !');
 }
 // 32. Если age_1  > age_3, вывести в консоль “Keep calm and look Culture channel”.
-if(age_1>age_3)
+else if(age_1>age_3)
 {
     console.log('Keep calm and look Culture channel');
 }
@@ -93,19 +93,96 @@ else
 
 // 4***:
 // Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке
-function ages(){
-    let a_1 = Number(prompt('Enter your age')), a_2 = 18, a_3 = 60
-    if(typeof a_1 === 'number' && a_1 > 0)
-    {
-        if(a_1 < a_2)
-        {
-            console.log(`You don't have access cause your age is ` + a_1 + ` It's less then`);
+
+function ages_1(age){
+    let age_2 = 18 , age_3 = 60;
+    if(age < age_2){
+        console.log(`You don't have access cause your age is ` + age + ` It's less then`);
+    }
+    else if(age >= age_2 && age < age_3){
+        console.log('Welcome !');
+    }
+    else if (age > age_3){
+        console.log('Keep calm and look culture channel');
+    }
+    else{
+        console.log('Technical work');
+    }
+}
+console.log(ages_1(17))
+console.log(ages_1(18))
+console.log(ages_1(61))
+
+// 2*:
+// Преобразовать задание 1* таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - кидалась ошибка.
+function ages_2(age){
+    let age_2 = 18 , age_3 = 60;
+    if(typeof age != 'number'){
+        console.log('Entered data is NaN')
+    }
+    else{
+        if(age < age_2){
+            console.log(`You don't have access cause your age is ` + age + ` It's less then`);
         }
-        else if(a_1 >= a_2 && a_1 < a_3)
+        else if(age >= age_2 && age < age_3){
+            console.log('Welcome !');
+        }
+        else if (age > age_3){
+            console.log('Keep calm and look culture channel');
+        }
+        else{
+            console.log('Technical work');
+        }
+    }
+}
+console.log(ages_1('asdcz'))
+console.log(ages_1(18))
+console.log(ages_1(61))
+
+// 3**:
+// Преобразовать 2* таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number
+
+function ages_3(age){
+    let age_2 = 18, age_3 = 60;
+    age = Number(age);
+    if(typeof age == 'number'){
+        if( age < age_2)
+        {
+            console.log(`You don't have access cause your age is ` + age + ` It's less then`);
+        }
+        else if(age >= age_2 && age < age_3)
         {
             console.log('Welcome !');
         }
-        else if(a_1 > a_3)
+        else if(age > age_3)
+        {
+            console.log('Keep calm and look Culture channel');
+        }
+        else
+        {
+            console.log('Technical work');
+        }
+    }
+}
+
+console.log(ages_3('23'));
+console.log(ages_3('hgashjgdk234123'));
+console.log(ages_3(54));
+
+function ages_4(age){
+    let age_2 = 18, age_3 = 60
+    age = Number(age)
+    if(typeof age === 'number' && age > 0)
+    {
+        if(age < age_2)
+        {
+            console.log(`You don't have access cause your age is ` + age + ` It's less then`);
+        }
+        else if(age >= age_2 && age < age_3)
+        {
+            console.log('Welcome !');
+        }
+        else if(age > age_3)
         {
             console.log('Keep calm and look Culture channel');
         }
@@ -116,15 +193,16 @@ function ages(){
     }
     else
     {
-        if(typeof a_1 != 'number')
+        if(typeof age != 'number')
         {
             alert('Entered data is NaN')
         }
-        else(a_1 > 0)
+        else(age < 0)
         {
             alert('Entered data less than 0')
         }
     }  
     return 
 }     
-console.log(ages())
+let age_4 = prompt('Enter your age');
+console.log(ages_4(age_4))
