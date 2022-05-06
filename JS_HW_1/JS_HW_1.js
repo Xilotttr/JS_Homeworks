@@ -97,47 +97,47 @@ else
 function ages_1(age){
     let age_2 = 18 , age_3 = 60;
     if(age < age_2){
-        console.log(`You don't have access cause your age is ` + age + ` It's less then`);
+        return (`You don't have access cause your age is ` + age + ` It's less then`)
     }
     else if(age >= age_2 && age < age_3){
-        console.log('Welcome !');
+        return 'Welcome !' 
     }
     else if (age > age_3){
-        console.log('Keep calm and look culture channel');
+        return 'Keep calm and look culture channel' 
     }
     else{
-        console.log('Technical work');
+        return 'Technical work'
     }
 }
-console.log(ages_1(17))
-console.log(ages_1(18))
-console.log(ages_1(61))
+ages_1(17);
+ages_1(18);
+ages_1(61);
 
 // 2*:
 // Преобразовать задание 1* таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - кидалась ошибка.
 function ages_2(age){
     let age_2 = 18 , age_3 = 60;
     if(typeof age != 'number'){
-        console.log('Entered data is NaN')
+        return 'Entered data is NaN'
     }
     else{
         if(age < age_2){
-            console.log(`You don't have access cause your age is ` + age + ` It's less then`);
+            return (`You don't have access cause your age is ` + age + ` It's less then`)
         }
         else if(age >= age_2 && age < age_3){
-            console.log('Welcome !');
+            return 'Welcome !'
         }
         else if (age > age_3){
-            console.log('Keep calm and look culture channel');
+            return 'Keep calm and look culture channel'
         }
         else{
-            console.log('Technical work');
+            return 'Technical work'
         }
     }
 }
-console.log(ages_1('asdcz'))
-console.log(ages_1(18))
-console.log(ages_1(61))
+ages_2('asdcz')
+ages_2(18)
+ages_2(61)
 
 // 3**:
 // Преобразовать 2* таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number
@@ -145,29 +145,32 @@ console.log(ages_1(61))
 function ages_3(age){
     let age_2 = 18, age_3 = 60;
     age = Number(age);
-    if(typeof age == 'number'){
+    if(age !isNan){
         if( age < age_2)
         {
-            console.log(`You don't have access cause your age is ` + age + ` It's less then`);
+            return (`You don't have access cause your age is ` + age + ` It's less then`);
         }
         else if(age >= age_2 && age < age_3)
         {
-            console.log('Welcome !');
+            return 'Welcome !'
         }
         else if(age > age_3)
         {
-            console.log('Keep calm and look Culture channel');
+            return 'Keep calm and look Culture channel'
         }
         else
         {
-            console.log('Technical work');
+            return 'Technical work'
         }
+    }
+    else{
+        return 'Entered data is NaN'
     }
 }
 
-console.log(ages_3('23'));
-console.log(ages_3('hgashjgdk234123'));
-console.log(ages_3(54));
+ages_3('23');
+ages_3('hgashjgdk234123');
+ages_3(54);
 
 // 4***:
 // Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке
@@ -181,33 +184,32 @@ function ages_4(age){
     {
         if(age < age_2)
         {
-            console.log(`You don't have access cause your age is ` + age + ` It's less then`);
+            return (`You don't have access cause your age is ` + age + ` It's less then`)
         }
         else if(age >= age_2 && age < age_3)
         {
-            console.log('Welcome !');
+            return 'Welcome !'
         }
         else if(age > age_3)
         {
-            console.log('Keep calm and look Culture channel');
+           return 'Keep calm and look Culture channel'
         }
         else
         {
-            console.log('Technical work');
+            return 'Technical work'
         }
     }
     else
     {
         if(typeof age != 'number')
         {
-            alert('Entered data is NaN')
+            return 'Entered data is NaN'
         }
-        else(age < 0)
+        else if(age < 0)
         {
-            alert('Entered data less than 0')
+            return 'Entered data less than 0'
         }
     }  
-    return 
 }     
 
-console.log(ages_4(age_4))
+ages_4(age_4);
