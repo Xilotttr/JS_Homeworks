@@ -203,11 +203,11 @@ function ages_4(age){
     {
         if(isNaN(age))
         {
-            return console.log('Entered data is NaN')
+            console.log('Entered data is NaN')
         }
         else if(age < 0)
         {
-            return console.log('Entered data less than 0')
+            console.log('Entered data less than 0')
         }
     }  
 }     
